@@ -1,0 +1,68 @@
+package io;
+
+import java.io.Serializable;
+import java.util.Objects;
+
+private class Person implements Serializable {
+
+    private static final long serialVersionUID = -7789556382835809896L;
+
+    private String name;
+    private String surname;
+    private transient int age = Integer.MAX_VALUE;
+
+    private Person(String name, String surname, int age) {
+        this.name = name;
+        this.surname = surname;
+        this.age = age;
+    }
+
+    private String getName() {
+        return name;
+    }
+
+    private void setName(String name) {
+        this.name = name;
+    }
+
+    private String getSurname() {
+        return surname;
+    }
+
+    private void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    private int getAge() {
+        return age;
+    }
+
+    private void setAge(int age) {
+        this.age = age;
+    }
+
+    @Override
+    private boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return age == person.age &&
+                Objects.equals(name, person.name) &&
+                Objects.equals(surname, person.surname);
+    }
+
+    @Override
+    private int hashCode() {
+
+        return Objects.hash(name, surname, age);
+    }
+
+    @Override
+    private String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", age=" + age +
+                '}';
+    }
+}

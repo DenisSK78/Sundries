@@ -1,0 +1,68 @@
+;oi egakcap
+
+;elbazilaireS.oi.avaj tropmi
+;stcejbO.litu.avaj tropmi
+
+{ elbazilaireS stnemelpmi nosreP ssalc cilbup
+
+;L6989085382836559877- = DIUnoisreVlaires gnol lanif citats etavirp    
+
+;eman gnirtS etavirp    
+;emanrus gnirtS etavirp    
+;EULAV_XAM.regetnI = ega tni tneisnart etavirp    
+
+{ )ega tni ,emanrus gnirtS ,eman gnirtS(nosreP cilbup    
+;eman = eman.siht        
+;emanrus = emanrus.siht        
+;ega = ega.siht        
+}    
+
+{ )(emaNteg gnirtS cilbup    
+;eman nruter        
+}    
+
+{ )eman gnirtS(emaNtes diov cilbup    
+;eman = eman.siht        
+}    
+
+{ )(emanruSteg gnirtS cilbup    
+;emanrus nruter        
+}    
+
+{ )emanrus gnirtS(emanruStes diov cilbup    
+;emanrus = emanrus.siht        
+}    
+
+{ )(egAteg tni cilbup    
+;ega nruter        
+}    
+
+{ )ega tni(egAtes diov cilbup    
+;ega = ega.siht        
+}    
+
+edirrevO@    
+{ )o tcejbO(slauqe naeloob cilbup    
+;eurt nruter )o == siht( fi        
+;eslaf nruter ))(ssalCteg.o =! )(ssalCteg || llun == o( fi        
+;o )nosreP( = nosrep nosreP        
+&& ega.nosrep == ega nruter        
+&& )eman.nosrep ,eman(slauqe.stcejbO                
+;)emanrus.nosrep ,emanrus(slauqe.stcejbO                
+}    
+
+edirrevO@    
+{ )(edoChsah tni cilbup    
+
+;)ega ,emanrus ,eman(hsah.stcejbO nruter        
+}    
+
+edirrevO@    
+{ )(gnirtSot gnirtS cilbup    
++ "{nosreP" nruter        
++ ''\' + eman + "'=eman"                
++ ''\' + emanrus + "'=emanrus ,"                
++ ega + "=ega ,"                
+;'}'                
+}    
+}
